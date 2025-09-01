@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
@@ -48,11 +52,13 @@ header {
 }
 
 .hero {
-
+position: relative;
     video {
         width: 100%;
-        margin-top: -30px;
         z-index: 0;
+        @media(max-width: 700px) {
+        margin-top: 50px;
+    }
     }
 
     .conteudo-hero {
@@ -62,11 +68,10 @@ header {
         width: 500px;
         position: absolute;
         top: 50%;
-        left: 60%;
 
         @media(max-width: 800px) {
             left: 0;
-            top: 25%;
+            top: 50%;
             font-size: 14px;
             width: 400px;
         }
@@ -92,7 +97,7 @@ header {
 .membros {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 3em;
     justify-content: center;
     background-color: white;
     padding: 30px 0px;
@@ -100,6 +105,7 @@ header {
 }
 
 .membro {
+    
     flex: 1 1 calc(33.333% - 2em);
     text-align: center;
     justify-items: center;
@@ -113,6 +119,7 @@ header {
     img {
         width: 90%;
         height: 375px;
+        height: 600px;
         object-fit: cover;
         border-radius: 10px;
 
@@ -126,7 +133,7 @@ header {
         width: 450px;
         margin-top: 8px;
 
-        @media(max-width: 900px) {
+        @media(max-width: 960px) {
             width: 700px;
         }
 
@@ -199,6 +206,7 @@ header {
 
     @media(max-width: 850px) {
         grid-template-columns: auto;
+        
     }
 
     .album {
